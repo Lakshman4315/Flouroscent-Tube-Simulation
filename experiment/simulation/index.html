@@ -7,6 +7,82 @@
 <body>
 		<!-- Your code goes here-->
 
+		<header>
+			<nav class="main-nav flex">
+				<button class="navbar-toggler" type="button" onclick="toggle()">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+	
+				<div class="d-flex justify-content-center">        
+					<a href="https://vlab.co.in" class="navbar-brand">
+						<img src="/VirtualLab/src/vlab_icon1.jpg" alt="vlabs logo" class="vlabs-logo"  >
+					</a>
+				</div>
+	
+				
+				<div style="margin-left: auto">
+					<ul class="nav-menu flex">
+						<li class="menu-item">
+							<a href="https://vlab.co.in">HOME</a>
+						
+						<li class="menu-item">
+							<a href="https://vlab.co.in/participating-institutes">PARTNERS</a>
+						
+						<li class="menu-item">
+							<a href="https://vlab.co.in/contact-us">CONTACT</a>
+						
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<div class="sim" >
+			<h2 style="text-align: center;background-color: #634380;font-weight: bolder;padding: 2px 0 2px 0;
+    		margin-top:30px;color: white">
+            FLUORESCENT LAMP SIMULATION</h2>
+
+			<div class="sim_table"  >
+				<div class="instruction" id="steps">Instructions : Enable Power</div>
+				<div class="item1">
+					<canvas id="mycanvas" style="width: 100%; height: 100%;"></canvas>
+				</div>
+
+				<button class="item2" type="button" id="enable" onclick="power()"> ENABLE POWER </button>
+				
+				<button class="instrument item3" type="button" id="tube-button" disabled onclick="showTube()">Fluorescent Tube</button>
+			
+				<button type="button" class="instrument item4" id="starter-button" disabled onclick="showStarter()">Starter</button>
+				
+				<button type="button" class="instrument item5" id="chock-button"  disabled onclick="showChoke()">Choke</button>
+				
+				<button type="button" class="instrument item6" id="amm-button" disabled onclick="showAmmeter()">Ammeter</button>
+				
+				<button type="button" class="instrument item7" id="volt-button" disabled onclick="showVoltmeter()">Voltmeter</button>
+				
+				<button type="button" class="instrument item8" id="wattmeter-button" disabled onclick="showWattmeter()">Wattmeter</button>
+				
+				<button type="button" class="instrument item9" id="supply-button" disabled onclick="showSupply()">1-ϕ supply</button>
+				
+				<button type="button" class="instrument item10" id="connect-button" disabled onclick="showWires()">Connect</button>
+				
+				<div class="item11">
+					<h3>Reading</h4>
+					<p id="readings">Voltmeter : 0V    Ammeter : 0A</p>
+				</div>
+				<div class="item12">
+
+					<label><b>Wattmeter Multiplying Factor</b>  </label>  <br><br>
+					<input type="radio" id="factor-1" disabled name="factor" onclick="valueOfFactor1()" value="2"/> 2    
+					<input type="radio" id="factor-2" disabled name="factor" onclick="valueOfFactor2()" value="4"/> 4 
+					
+				</div>
+
+				<h1 class="item13">Result</h1>
+				<p class="item14" id="result"><b>Wattmeter Reading : 0 Watts</b></p>
+
+			</div>
+		</div>
+
 	<!-- Add JS at the bottom of HTML file --> 
         <script src="./js/main.js"></script>
 </body>
